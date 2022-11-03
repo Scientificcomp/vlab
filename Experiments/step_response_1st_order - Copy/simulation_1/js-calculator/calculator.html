@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="stylesheets/style1.css" rel="stylesheet" />
+	 <link rel="stylesheet" type="text/css" href=stylesheets/style.css" />
+	<script src="javascripts/model/calculation.js"></script>
+	<script src="javascripts/model/input-area.js"></script>
+	<script src="javascripts/model/final-area.js"></script>
+	<script src="javascripts/model/history.js"></script>
+	<script src="javascripts/model/memory.js"></script>
+	<script src="javascripts/model/model.js"></script>
+	<script src="javascripts/controller.js"></script>
+	<script src="javascripts/view.js"></script>
+</head>
+<body>
+<div id="calculator">
+	<table class="mainTable">
+		<tr class="mainTable">
+			<td class="main">
+				<div id="calculatorContent" class="mainContent">
+					<div class="modeBar">
+						<ul>
+							<li class="dropdown">
+								<button class="mode">History</button>
+								<div id="clearHistory" class="dropdown-content">
+									<button class="mode" id="hClear">Clear</button>
+									<button id="showHistory" class="mode" >Show/Hide</button>
+								</div>
+							</li>
+							<li class="dropdown">
+								<button class="mode" >Memory</button>
+								<div class = "dropdown-content">
+									<button id="MC" class="mode">MC</button>
+									<button id="MCA" class="mode">MCA</button>
+									<button id="M+" class="mode">M+</button>
+									<button id="M-" class="mode">M-</button>
+									<button id="MS" class="mode">MS</button>
+									<button id="MR" class="mode">MR</button>
+									<button id="showMem" class="mode" >Show/Hide</button>
+
+								</div>
+							</li>
+							<li class="dropdown">
+								<button class="mode" id="units">Degrees</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="results">
+						<p id="lastCalc" ></p>
+						<p id="result" ></p>
+						<p id="input" ></p>
+					</div>
+
+					<div id="buttonTableDiv" class="buttons">
+						<table class="buttonTable">
+							<tr>
+								<td><button class="func" value="sqr(" type="button">x<span class="corner">2</span></button></td>
+								<td><button class="func" value="1/(" type="button">1/x</button></td>
+								<td><button class="func" value="e^(" type="button">e<span class="corner">x</span></button></td>
+								<td><button class="func" value="ln(" type="button">ln</button></td>
+								<td><button class="op" value="^" type="button">x<span class="corner">y</span></button></td>
+							</tr>
+							<tr>
+								<td><button class="func" value="root(" type="button">root</button></td>
+								<td><button class="func" value="10^(" type="button">10<span class="corner">x</span></button></td>
+								<td><button class="func" value="sin(" type="button">sin</button></td>
+								<td><button class="func" value="cos(" type="button">cos</button></td>
+								<td><button class="op" value="%" type="button">%</button></td>
+							</tr>
+							<tr>
+								<td><button class="func" value="log(" type="button">log</button></td>
+								<td><button class="gfunc" id="CE" value="CE" type="button">CE</button></td>
+								<td><button class="gfunc" id="C" value="C" type="button">C</button></td>
+								<td><button class="gfunc" id="back" value="back" type="button">back</button></td>
+								<td><button class="op" value="/" type="button">/</button></td>
+							</tr>
+							<tr>
+								<td><button class="gfunc" id="pi" value="pi" type="button">pi</button></td>
+								<td><button class="number" value="7" type="button">7</button></td>
+								<td><button class="number" value="8" type="button">8</button></td>
+								<td><button class="number" value="9" type="button">9</button></td>
+								<td><button class="op" value="*" type="button">*</button></td>
+							</tr>
+							<tr>
+								<td><button class="func" value="fact(" type="button">n!</button></td>
+								<td><button class="number" value="4" type="button">4</button></td>
+								<td><button class="number" value="5" type="button">5</button></td>
+								<td><button class="number" value="6" type="button">6</button></td>
+								<td><button class="op" value="-" type="button">-</button></td>
+							</tr>
+							<tr>
+								<td><button class="func" value="neg(" type="button">negate</button></td>
+								<td><button class="number" value="1" type="button">1</button></td>
+								<td><button class="number" value="2" type="button">2</button></td>
+								<td><button class="number" value="3" type="button">3</button></td>
+								<td><button class="op" value="+" type="button">+</button></td>
+							</tr>
+							<tr>
+								<td><button class="parenthesis" id="(" value="(" type="button">(</button></td>
+								<td><button class="parenthesis" id=")" value=")" type="button">)</button></td>
+								<td><button class="number" value="0" type="button">0</button></td>
+								<td><button class="number" value="." type="button">.</button></td>
+								<td><button class="gfunc" id="equals" value="=" type="button">=</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+			<td id="historyBox" class="historyColumn">
+				<div class="history">
+					HISTORY:
+					<p id="history"></p>
+				</div>
+			</td>
+			<td id="memBox" class="memoryColumn">
+				<div class="memory">
+					MEMORY
+					<p id="memory"></p>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+<script>
+    var model = new CalculatorModel();
+    var view = new CalculatorView(model);
+    var controller = new CalculatorController(model, view);
+	
+    view.initialize("input", "result", "lastCalc","history","memory");
+    model.initialize();
+    controller.initialize();
+</script>
+</html>

@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FINAL </title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="newton-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+    <style>
+ 
+        /* Set display to none for image*/
+        #sol1, #sol2, #sol3, #sol3_1, #sol4, #sol4_1, #sol5, #sol6, #sol6_1, #sol7, #sol7_1, #sol8, #sol8_1 {
+            display: none;
+        }
+         
+    
+    </style>
+</head>
+
+<body>
+    <header style="border-bottom-style: solid;
+    border-bottom-color: red;border-width: 7px;">
+
+        <div style="background-color:rgb(255, 255, 255); height:auto;width:auto;">
+            <img src="https://www.vlab.co.in/images/logo.jpg" alt="" style="width:200px;height: 90px;">
+            <vr>
+        </div>
+    
+        <div style="width: 100%;">
+            <!-- <img class="logo" src=""> -->
+            <h1>Finding roots of Trapezoidal and Simpson’s equations.</h1>
+        </div>
+
+    </header>
+    <div class="heading" >
+        <div class="heading--1">
+            <h1>Finding roots of algebraic and transcendental equations</h1>
+        </div>
+        <select name="eqation-type" id="select-eqn">
+            <option value="select">Select</option>
+            <option value="Algebraic-equation" class="alg-eqn">Trapezoidal</option>
+            <option href="../simulation_2/index.html" value="Transcendental-equation" class="trsn-eqn">Simpson’s method </option>
+        </select>
+        <div class="heading--2 algebraic--equation1">
+            <h1> For finding the roots of linear, quadratic and third degree polynomial.
+        </div>
+        </h1>
+        <div class="heading--2 transedental--equation1">
+            <h1> For finding the roots of transcendental equation.
+            </h1>
+        </div>
+    <!-- <hr> -->
+    </div>
+    <div class="algebraic--equation2">
+        <div class="explanation">
+            <img src="../queimg/qustion 1.png" alt="">
+
+            <br>
+           <img id="sol1" src="../queimg/solution 1.png" alt="GFG image" />
+           <br>
+           <input type="button" onclick="show1()" id="btnID2" value="SIMULATION">
+       
+       </input>
+       <script>
+          function show1() {
+                var x = document.getElementById("sol1");
+                var y = document.getElementById("btnID2");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                  y.value = "SIMULATION";
+                } else {
+                  x.style.display = "block";
+                  y.value = "close";
+                }
+                
+              }
+             </script>
+
+       <br>
+
+       <img src="../queimg/Question 2.png" alt="">
+
+       <br>
+      <img id="sol2" src="../queimg/solution 2.png" alt="GFG image" />
+      <br>
+      <input type="button" onclick="show2()" id="sol2btn" value="SIMULATION">
+  
+  </input>
+  <script>
+   function show2() {
+       var x = document.getElementById("sol2");
+       var y = document.getElementById("sol2btn");
+      if (x.style.display === "block") {
+                  x.style.display = "none";
+                  y.value = "SIMULATION";
+                } else {
+                  x.style.display = "block";
+                  y.value = "close";
+                }
+       
+     }
+     </script>
+  <br>
+  <img src="../queimg/Question 3.png" alt="">
+
+  <br>
+ <img id="sol3" src="../queimg/solution 3.png" alt="GFG image" />
+ <img id="sol3_1" src="../queimg/solution 3 Graph.png" alt="GFG image" />
+ <br>
+ <input type="button" onclick="show3()" id="sol3btn" value="SIMULATION">
+
+</input>
+<script>
+   function show3() {
+       var x = document.getElementById("sol3");
+       var y = document.getElementById("sol3btn");
+       var z = document.getElementById("sol3_1");
+       if (x.style.display === "block") {
+         x.style.display = "none";
+         y.value = "SIMULATION";
+         z.style.display = "none";
+       } else {
+         x.style.display = "block";
+         y.value = "close";
+         z.style.display = "block";
+       }
+       
+     }
+     </script>
+<br>
+<img src="../queimg/question 4.png" alt="">
+
+<br>
+<img id="sol4" src="../queimg/solution 4.png" alt="GFG image" />
+<img id="sol4_1" src="../queimg/solution 4 Graph.png" alt="GFG image" />
+<br>
+<input type="button" onclick="show4()" id="sol4btn" value="SIMULATION">
+
+</input>
+
+   <script>
+        function show4() {
+       var x = document.getElementById("sol4");
+       var y = document.getElementById("sol4btn");
+       var z = document.getElementById("sol4_1");
+       if (x.style.display === "block") {
+         x.style.display = "none";
+         y.value = "SIMULATION";
+         z.style.display = "none";
+       } else {
+         x.style.display = "block";
+         y.value = "close";
+         z.style.display = "block";
+       }
+       
+     }
+         </script>
+            </div>
+        </div>
+    
+        <div id="graph">
+        </div>
+    </div>
+    <div class="transedental--equation2">
+        <div class="explanation">
+            <img src="../SIMPSON/QUE1 .png" alt="">
+
+             <br>
+            <img id="sol5" src="../SIMPSON/SOL1.png" alt="GFG image" />
+            <br>
+            <input type="button" onclick="show5()" id="btnID5" value="SIMULATION">
+        
+        </input>
+        <script>
+            function show5() {
+                var x = document.getElementById("sol5");
+                var y = document.getElementById("btnID5");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                  y.value = "SIMULATION";
+                } else {
+                  x.style.display = "block";
+                  y.value = "close";
+                }
+                
+              }
+              </script>
+
+        <br>
+
+        <img src="../SIMPSON/QUE2.png" alt="">
+
+        <br>
+       <img id="sol6" src="../SIMPSON/SOL2.png" alt="GFG image" />
+       <br>
+       <input type="button" onclick="show5()" id="sol6btn" value="SIMULATION">
+   
+   </input>
+   <script>
+    function show5() {
+        var x = document.getElementById("sol6");
+        var y = document.getElementById("sol6btn");
+        if (x.style.display === "block") {
+                  x.style.display = "none";
+                  y.value = "SIMULATION";
+                } else {
+                  x.style.display = "block";
+                  y.value = "close";
+                }
+        
+      }
+      </script>
+   <br>
+   <img src="../SIMPSON/QUE3.png" alt="">
+
+   <br>
+  <img id="sol7" src="../SIMPSON/SOL3.png" alt="GFG image" />
+  <img id="sol7_1" src="../SIMPSON/SOL3 GRAPH.png" alt="GFG image" />
+  <br>
+  <input type="button" onclick="show7()" id="sol7btn" value="SIMULATION">
+
+</input>
+<script>
+    function show7() {
+        var x = document.getElementById("sol7");
+        var y = document.getElementById("sol7btn");
+        var z = document.getElementById("sol7_1");
+        if (x.style.display === "block") {
+         x.style.display = "none";
+         y.value = "SIMULATION";
+         z.style.display = "none";
+       } else {
+         x.style.display = "block";
+         y.value = "close";
+         z.style.display = "block";
+       }
+        
+      }
+      </script>
+<br>
+<img src="../SIMPSON/QUE4.png" alt="">
+
+<br>
+<img id="sol8" src="../SIMPSON/SOL4.png" alt="GFG image" />
+<img id="sol8_1" src="../SIMPSON/SOL4 GRAPH.png" alt="GFG image" />
+<br>
+<input type="button" onclick="show8()" id="sol8btn" value="SIMULATION">
+
+</input>
+
+    <script>
+         function show8() {
+        var x = document.getElementById("sol8");
+        var y = document.getElementById("sol8btn");
+        var z = document.getElementById("sol8_1");
+        if (x.style.display === "block") {
+         x.style.display = "none";
+         y.value = "SIMULATION";
+         z.style.display = "none";
+       } else {
+         x.style.display = "block";
+         y.value = "close";
+         z.style.display = "block";
+       }
+        
+      }
+          </script>
+        </div>
+
+        
+    </div>
+
+    <script src="newton-rap-sim.js"></script>
+</body>
+
+</html>
