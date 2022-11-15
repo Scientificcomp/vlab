@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <script src="js/calculation.js" type="text/javascript"></script>
+  <script src="js/index.js" type="text/javascript"></script>
+</head>
+<body>
+  <header style="border-bottom-style: solid;text-align: left;
+    border-bottom-color: red;border-width: 7px;">
+        <div style="background-color:rgb(255, 255, 255); height:auto;width:auto;">
+            <img src="https://www.vlab.co.in/images/logo.jpg" alt="" style="width:200px;height: 90px;">
+            <vr>
+        </vr></div>
+    
+        <div style="width: 100%;">
+            <!-- <img class="logo" src=""> -->
+
+        </div>
+
+    </header>
+    <div class="navigation-bar">
+      <a href="../../index.html">Scientific Computing Lab</a> &gt; <a href="../index.html">Experiments</a>
+    </div>
+  <div id="top"><h1>Simulation for Differentiation</h1>
+  	<div id="function">
+  		<label>y = </label>
+      <input type="text" value="" id="input" /><br /><br />
+      <span>Example : d/dx (x+4)^2*(x-6)+60sinx </span>
+    </div>
+  	<div id="range">
+  		<div class="rangeSection">From <input type="text" value="" placeholder="-10" id="x1" /> &lt; x &lt; <input type="text" value="" placeholder="10" id="x2" /></div>
+      <div class="rangeSection">and <input type="text" placeholder="auto" value="" id="y1" /> &lt; y &lt; <input type="text" placeholder="auto" value="" id="y2" /></div>
+  	</div>
+  	<input type="button" value="Simulate" id="graph" />
+  </div>
+  <div id="wrapper" >
+    <div id="result"></div>
+  </div>
+</body>
+</html>
